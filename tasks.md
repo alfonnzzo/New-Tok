@@ -11,7 +11,7 @@ Antes de iniciar la codificación, auditamos esta lista respondiendo tres pregun
 ## Tareas de Implementación (Checklist)
 
 ### Fase 1: Esqueleto y Navegación
-- [ ] **Tarea 1: Configurar Expo Router y Tabs base.**
+- [x] **Tarea 1: Configurar Expo Router y Tabs base.**
   - Acción: instalar dependencias necesarias. Configurar `app/_layout.tsx` con `Tabs` (Inicio, Bandeja, Perfil).
   - Verificación: al escanear el QR en Expo Go, la app abre sin errores y muestra las tres pestañas vacías; navegar entre ellas cambia de pantalla.
 

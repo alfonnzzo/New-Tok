@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Inicio() {
+export default function Perfil() {
   return (
     <View style={styles.contenedor}>
-      <Text>Inicio</Text>
+      <Text>Perfil</Text>
     </View>
   );
 }
