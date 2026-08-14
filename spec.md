@@ -29,6 +29,7 @@ Al menos 7 interfaces, orquestadas con Tab Navigation + stack + modales (`expo-r
 - Dado que no hay sesión activa, al abrir la app se muestra el feed sin pedir login.
 - Mientras el mock resuelve la primera carga, se muestra un estado de carga (spinner/skeleton).
 - Si el mock devuelve una lista vacía, se muestra un estado vacío con mensaje ("No hay videos disponibles").
+- Si el mock falla, se muestra un mensaje de error con un botón "Reintentar" que vuelve a pedir los datos. Regla general: toda pantalla que consuma un servicio mock cubre los tres estados (carga, vacío, error).
 
 ### 4.2 Muro de fricción
 **Como** usuario anónimo, **quiero** que la app me pida registrarme si intento comentar o dar like **para** entender que necesito una cuenta para interactuar.

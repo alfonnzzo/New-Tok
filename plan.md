@@ -20,6 +20,7 @@ Convención del template de `create-expo-app`: todo el código de la app vive ba
     CommentSheet.tsx           # Bottom sheet de comentarios
     EmptyState.tsx             # Estado vacío reutilizable
     LoadingState.tsx           # Spinner/skeleton reutilizable
+    ErrorState.tsx             # Mensaje de error + botón "Reintentar"
     FormField.tsx               # Input con validación y mensaje de error
   /hooks
     useAuth.ts                 # Consume AuthContext
@@ -91,7 +92,7 @@ Message {
 - **Perfil → Publicar:** modal con el formulario de alta de video; al confirmar, vuelve a Perfil con el nuevo item en la grilla.
 
 ## 4. Componentes Reutilizables
-- `EmptyState` y `LoadingState` se usan en Feed, Bandeja y Chat (mismo patrón de carga/vacío en los tres).
+- `EmptyState`, `LoadingState` y `ErrorState` se usan en Feed, Bandeja y Chat (mismo patrón de carga/vacío/error en los tres).
 - `FormField` centraliza validación + mensaje de error, se usa en Auth y en Publicar.
 
 ## 5. Validación Humana
