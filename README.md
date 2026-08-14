@@ -12,5 +12,3 @@ Prototipo funcional (sin backend, datos mock) de un clon de las mecánicas princ
 1. Instalar dependencias: `npm install`
 2. Iniciar el servidor de desarrollo: `npx expo start`
 3. Escanear el QR con **Expo Go** en un teléfono real.
-
-_(Pasos se completan una vez creado el proyecto con `npx create-expo-app`.)_
