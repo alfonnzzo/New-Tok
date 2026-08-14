@@ -1,7 +1,9 @@
 # Lista de Tareas y Auditoría (TASKS) - Proyecto "NewTok"
 
 ## Auditoría del Plan de Trabajo
+
 Antes de iniciar la codificación, auditamos esta lista respondiendo tres preguntas clave:
+
 1. **¿Es atómica?** Sí. Cada tarea afecta una sola funcionalidad y un conjunto acotado de archivos.
 2. **¿Está en el orden correcto?** Sí. Se construye de "afuera hacia adentro": primero navegación base, luego UI estática, después datos mock, y por último la interacción entre ambas (auth, validación, formularios).
 3. **¿Cómo verifico que quedó terminada?** Cada tarea tiene un criterio de verificación que se prueba manualmente en Expo Go antes de avanzar a la siguiente.
@@ -11,12 +13,14 @@ Antes de iniciar la codificación, auditamos esta lista respondiendo tres pregun
 ## Tareas de Implementación (Checklist)
 
 ### Fase 1: Esqueleto y Navegación
-- [x] **Tarea 1: Configurar Expo Router y Tabs base.**
+
+- [X] **Tarea 1: Configurar Expo Router y Tabs base.**
   - Acción: instalar dependencias necesarias. Configurar `app/_layout.tsx` con `Tabs` (Inicio, Bandeja, Perfil).
   - Verificación: al escanear el QR en Expo Go, la app abre sin errores y muestra las tres pestañas vacías; navegar entre ellas cambia de pantalla.
 
 ### Fase 2: Consumo Pasivo (Modo Anónimo)
-- [ ] **Tarea 2: Crear mock de datos de videos.**
+
+- [X] **Tarea 2: Crear mock de datos de videos.**
   - Acción: crear `/mocks/data/videos.json` (5 objetos: id, url, autor, likes, descripcion, comentarios, fecha) y `/mocks/services/videoService.ts` con `getVideos()` como `Promise` + `setTimeout` (500–1000 ms).
   - Verificación: el servicio importado en un componente de prueba resuelve el array tras el delay simulado.
 - [ ] **Tarea 3: Implementar UI del Feed con estados de carga y vacío.**
@@ -27,6 +31,7 @@ Antes de iniciar la codificación, auditamos esta lista respondiendo tres pregun
   - Verificación: los botones son visibles sobre el video y no rompen el layout en distintos tamaños de pantalla (aún no ejecutan acción).
 
 ### Fase 3: Autenticación Simulada (El Muro de Fricción)
+
 - [ ] **Tarea 5: Contexto de Auth y AsyncStorage.**
   - Acción: crear `AuthContext` (Context API) con `login(usuario, password)` y `logout()`, persistiendo la sesión en `AsyncStorage`.
   - Verificación: al loguear con un usuario de prueba y recargar la app en Expo Go, la sesión sigue activa.
@@ -38,6 +43,7 @@ Antes de iniciar la codificación, auditamos esta lista respondiendo tres pregun
   - Verificación: (Anónimo) toca "Me gusta" → abre modal. (Logueado) toca "Me gusta" → el ícono cambia a rojo, sin abrir el modal.
 
 ### Fase 4: Interacción Social y Almacenamiento Local
+
 - [ ] **Tarea 8: Panel de Comentarios.**
   - Acción: crear `CommentSheet` (bottom sheet/modal). Cargar comentarios mock vía `commentService.getComments()`. Permitir que el usuario logueado agregue un comentario (no vacío).
   - Verificación: tocar "Comentar" abre el panel; escribir y enviar agrega el comentario a la lista al instante; intentar enviar vacío no hace nada.
@@ -49,6 +55,7 @@ Antes de iniciar la codificación, auditamos esta lista respondiendo tres pregun
   - Verificación: desde Bandeja se navega a un chat, se ve el historial simulado y se pueden enviar mensajes nuevos que quedan en la lista.
 
 ### Fase 5: Publicación, Detalle y Perfil
+
 - [ ] **Tarea 11: Pantalla de Perfil.**
   - Acción: construir `app/profile.tsx` mostrando el usuario activo (`AsyncStorage`) y una grilla de sus videos publicados. Botón "Cerrar sesión".
   - Verificación: el perfil refleja el usuario logueado; "Cerrar sesión" borra `AsyncStorage` y vuelve al modo anónimo.
